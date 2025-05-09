@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="CSS/forms.css">
+    <script>
+        function redirecionar2() {
+            alert("Obrigado por ter feito o cadastro em nosso site!");
+            window.location.href = "index2.html";
+}
+
+function redirecionar() {
+    document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (this.checkValidity()) {
+            redirecionar2();
+        } else {
+            alert("Por favor, preencha todos os campos obrigatórios antes de continuar.");
+        }
+    });
+}
+    
+    </script>
+
+    </head>
+    <body>
+        <header>    
+            
+            <h1>Cadastro</h1>
+                
+            
+        </header>
+        
+        <form method="get" id="meuFormulario" action="">
+            <div class="botao-voltar">
+                <button onclick="voltarInicio()">Voltar à Página Inicial</button>
+              </div>
+            <script>
+                function voltarInicio() {
+                    window.location.href = "index.html";
+    
+                }
+    
+            </script>
+            <br>
+            <br>
+            <fieldset>
+                <legend><strong>Cadastre-se</strong></legend>
+    
+               
+                <div class="forms">
+                    <label for="nome"><strong>Nome:</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+    
+    <br>            
+                <div class="forms">
+                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+    
+    <br>           
+                <div class="forms">
+                    <label for="email"><strong>E-mail:</strong></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+    
+    <br>       
+                <div class="forms">
+                    <label><strong>Qual o gênero?</strong></label><br>
+                    <input type="radio" name="genero" value="feminino" checked> Feminino
+                    <input type="radio" name="genero" value="masculino"> Masculino
+                    <input type="radio" name="genero" value="outro"> Outro
+                    <input type="radio" name="genero" value="naodizer"> Prefiro não dizer
+                </div>
+    <br>
+               
+                <div class="forms">
+                    <label for="nascimento"><strong>Data de nascimento:</strong></label>
+                    <input type="date" name="nascimento" id="nascimento" min="1910-01-01" max="2100-01-01">
+                </div>
+    <br>
+               
+                <div class="forms">
+                    <label for="senha"><strong>Senha:</strong></label>
+                    <input type="password" name="senha" id="senha" required>
+                </div>
+            </fieldset>
+ 
+            <fieldset>
+                
+                <legend><strong>Endereço do Usuário:</strong></legend>  
+                <div class="forms">  
+                    <label for="logradouro"><strong>Rua:</strong></label>
+                    <input type="text" name="Rua" id="endereço" required>
+                </div> 
+    
+    <br>          
+                <div class="forms">
+                    <label for="endereco"><strong>Endereço:</strong></label>
+                    <input type="text" name="endereco" id="endereco" required>
+                </div>
+                
+    <br>            
+                <div class="forms">
+                    <label for="numero"><strong>Número:</strong></label>
+                    <input type="number" name="numero" id="numero" required>
+                </div>
+    
+    <br>          
+                <div class="forms">
+                    <label for="bairro"><strong>Bairro:</strong></label>
+                    <input type="text" name="bairro" id="bairro" required>
+                </div>
+    
+    <br>           
+                <div class="forms">
+                    <label for="cidade"><strong>Cidade:</strong></label>
+                    <input type="text" name="cidade" id="cidade" required>
+                </div>
+    
+    <br>         
+                <div class="forms">
+                    <label for="estado"><strong>Estado:</strong></label>
+                    <select id="estado" required>
+                        <option>Selecione</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>Pi</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+            </fieldset>
+    
+           
+            <fieldset>
+                <legend><strong>Feedback</strong></legend>
+                <label for="experiencia"><strong>Conte para nós: O que podemos melhorar em nosso site?:</strong></label><br>
+                <textarea rows="6" style="width: 100%;" id="experiencia" name="experiencia"></textarea>
+            </fieldset>
+    
+            <div class="forms">
+                <a href="index.html">
+            <button type="submit" onclick="redirecionar()">Enviar</button>
+            </a>
+          </div>
+        </form>
+        <footer>
+            <p>&copy; 2025 - Projeto educativo sobre desperdício de alimentos. Criado por Cem Desperdício.</p>
+        </footer>
+    </body>
+    </html>
+    
