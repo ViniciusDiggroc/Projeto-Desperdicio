@@ -68,3 +68,5 @@ Para participar da etapa do projeto, todos os integrantes da equipe precisam com
 ### **Responsividade**
 ✅ Garantir que o site siga as **regras de acessibilidade**.  
 ✅ O site deve se **adaptar a diferentes tamanhos de tela**.
+
+[Video de apresentação :rocket:](https://drive.google.com/file/d/1opscn1igFk2B-50nynxMueWb3E_-umQY/view?usp=drive_link)
